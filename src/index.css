@@ -66,3 +66,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  padding: 0 !important;
+}

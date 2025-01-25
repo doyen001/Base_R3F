@@ -1,6 +1,7 @@
 import { Canvas, useFrame } from '@react-three/fiber'
 import './App.css'
 import { useRef } from 'react'
+import { GizmoHelper, GizmoViewcube, OrbitControls } from '@react-three/drei';
 
 function App() {
 
@@ -25,7 +26,20 @@ function App() {
     <div id="container">
       <Canvas camera={{position: [2,2,1]}}>
         <Animation />
-        <directionalLight position={[2, 5, 1]} />
+        {/* <ambientLight /> */}
+        <spotLight intensity={50} position={[4, 2, 3]} />
+
+        {/* <directionalLight
+          position={[4, 2, 3]}
+          color={0xffea00}
+          intensity={0.8}
+        /> */}
+        {/* <directionalLight position={[2, 5, 1]} /> */}
+        <OrbitControls />
+        {/* <GizmoHelper alignment="bottom-right" margin={[80, 80]} >
+        <GizmoViewcube />
+        </GizmoHelper> */}
+
 
         {/* <mesh>
           <boxGeometry args={[2,3,2]} />
